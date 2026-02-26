@@ -1,0 +1,76 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.8 (found version "3.8.10") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclpy: 3.3.10 (/opt/ros/humble/share/rclpy/cmake)
+-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found tf2: 0.25.4 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_ros: 0.25.4 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found tf2_geometry_msgs: 0.25.4 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Found Eigen3: TRUE (found version "3.3.7") 
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found qcar2_interfaces: 0.0.0 (/workspaces/isaac_ros-dev/ros2/install/qcar2_interfaces/share/qcar2_interfaces/cmake)
+-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /workspaces/isaac_ros-dev/ros2/build/qcar2_cpp
+[ 50%] [32mBuilding CXX object CMakeFiles/ekf_node.dir/src/ekf_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable ekf_node[0m
+[100%] Built target ekf_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/lib/qcar2_cpp/ekf_node
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/ament_index/resource_index/package_run_dependencies/qcar2_cpp
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/ament_index/resource_index/parent_prefix_path/qcar2_cpp
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/environment/ament_prefix_path.sh
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/environment/ament_prefix_path.dsv
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/environment/path.sh
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/environment/path.dsv
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/local_setup.bash
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/local_setup.sh
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/local_setup.zsh
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/local_setup.dsv
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/package.dsv
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/ament_index/resource_index/packages/qcar2_cpp
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/cmake/qcar2_cppConfig.cmake
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/cmake/qcar2_cppConfig-version.cmake
+-- Symlinking: /workspaces/isaac_ros-dev/ros2/install/qcar2_cpp/share/qcar2_cpp/package.xml

@@ -1,0 +1,5 @@
+slam_toolbox:
+  ros__parameters:
+    odom_frame: odom        # <--- Does your robot publish "odom" or "odometry"?
+    base_frame: base_link   # <--- Does your robot use "base_link" or "base_footprint"?
+    scan_topic: /scan       # <--- Verify this topic name

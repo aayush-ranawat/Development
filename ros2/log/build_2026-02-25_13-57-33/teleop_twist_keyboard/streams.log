@@ -1,0 +1,24 @@
+[0.553s] Invoking command in '/workspaces/isaac_ros-dev/ros2/build/teleop_twist_keyboard': PYTHONPATH=/workspaces/isaac_ros-dev/ros2/build/teleop_twist_keyboard/prefix_override:/workspaces/isaac_ros-dev/ros2/install/teleop_twist_keyboard/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /workspaces/isaac_ros-dev/ros2/build/teleop_twist_keyboard/build --no-deps install_data
+[0.719s] running develop
+[0.816s] running egg_info
+[0.817s] creating teleop_twist_keyboard.egg-info
+[0.821s] writing teleop_twist_keyboard.egg-info/PKG-INFO
+[0.821s] writing dependency_links to teleop_twist_keyboard.egg-info/dependency_links.txt
+[0.821s] writing entry points to teleop_twist_keyboard.egg-info/entry_points.txt
+[0.821s] writing requirements to teleop_twist_keyboard.egg-info/requires.txt
+[0.821s] writing top-level names to teleop_twist_keyboard.egg-info/top_level.txt
+[0.822s] writing manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+[0.831s] reading manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+[0.831s] writing manifest file 'teleop_twist_keyboard.egg-info/SOURCES.txt'
+[0.852s] running build_ext
+[0.852s] Creating /workspaces/isaac_ros-dev/ros2/install/teleop_twist_keyboard/lib/python3.8/site-packages/teleop-twist-keyboard.egg-link (link to .)
+[0.853s] Installing teleop_twist_keyboard script to /workspaces/isaac_ros-dev/ros2/install/teleop_twist_keyboard/lib/teleop_twist_keyboard
+[0.853s] 
+[0.853s] Installed /workspaces/isaac_ros-dev/ros2/build/teleop_twist_keyboard
+[0.853s] running install_data
+[0.853s] creating /workspaces/isaac_ros-dev/ros2/install/teleop_twist_keyboard/share/ament_index
+[0.853s] creating /workspaces/isaac_ros-dev/ros2/install/teleop_twist_keyboard/share/ament_index/resource_index
+[0.853s] creating /workspaces/isaac_ros-dev/ros2/install/teleop_twist_keyboard/share/ament_index/resource_index/packages
+[0.853s] copying resource/teleop_twist_keyboard -> /workspaces/isaac_ros-dev/ros2/install/teleop_twist_keyboard/share/ament_index/resource_index/packages
+[0.853s] copying package.xml -> /workspaces/isaac_ros-dev/ros2/install/teleop_twist_keyboard/share/teleop_twist_keyboard
+[0.872s] Invoked command in '/workspaces/isaac_ros-dev/ros2/build/teleop_twist_keyboard' returned '0': PYTHONPATH=/workspaces/isaac_ros-dev/ros2/build/teleop_twist_keyboard/prefix_override:/workspaces/isaac_ros-dev/ros2/install/teleop_twist_keyboard/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /workspaces/isaac_ros-dev/ros2/build/teleop_twist_keyboard/build --no-deps install_data
