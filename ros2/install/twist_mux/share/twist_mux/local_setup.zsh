@@ -1,1 +1,0 @@
-/workspaces/isaac_ros-dev/ros2/build/twist_mux/ament_cmake_environment_hooks/local_setup.zsh

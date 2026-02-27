@@ -52,6 +52,15 @@ class ObjectDetector(Node):
 
 
 
+        # Create an OpenCV window
+        self.window_name = "YOLO_Stream"
+        cv2.namedWindow(self.window_name)
+        
+        # Bind the mouse callback function to the window
+        cv2.setMouseCallback(self.window_name, self.mouse_callback)
+
+
+
         self.qcar_hardware_node= "qcar2_hardware"
 
         self.qcar_hardware_client = self.create_client(SetParameters, f'/{self.qcar_hardware_node}/set_parameters')
@@ -90,6 +99,15 @@ class ObjectDetector(Node):
         self.bridge= CvBridge()
         self.led_set_logic(qcar_state=4.0)
 
+
+    def mouse_callback(self, event, x, y, flags, param):
+        """
+        This function is called automatically whenever a mouse event occurs in the OpenCV window.
+        """
+        # Listen for the Left Mouse Button Down event
+        if event == cv2.EVENT_LBUTTONDOWN:
+            self.get_logger().info(f"Point Clicked: X = {x}, Y = {y}")
+
     
     def pose_callback(self,msg):
          # 1. Position
@@ -109,7 +127,7 @@ class ObjectDetector(Node):
     def image_callback(self, msg):
             try:
 
-                print(f"traffic stop sign is {self.traffic_stop}")
+                # print(f"traffic stop sign is {self.traffic_stop}")
 
                 
 
@@ -128,6 +146,9 @@ class ObjectDetector(Node):
         
                     # Publish to the high-priority topic
                     self.brake_pub.publish(stop_msg)
+
+                else:
+                    self.led_set_logic(qcar_state=4.0)
 
 
 
@@ -151,7 +172,7 @@ class ObjectDetector(Node):
                 drop_off_dist=np.linalg.norm(self.current_pose-self.drop_off)
 
                 taxi_hub_dist=np.linalg.norm(self.current_pose-self.taxi_hub)
-                print(f"taxihub distance is {taxi_hub_dist}")
+                # print(f"taxihub distance is {taxi_hub_dist}")
 
 
                 if pick_up_dist < 0.15 and self.stop_sign==0 and self.stop_buffer==0:
@@ -172,11 +193,13 @@ class ObjectDetector(Node):
                      self.drop_off_f=True
 
                 
-                if taxi_hub_dist < 0.20 :
+                if taxi_hub_dist < 0.40 :
                      
                           
-                    self.stop_sign=1
+                    # self.stop_sign=1
                     self.led_set_logic(qcar_state=5.0)
+
+                    return
                 
                      
 
@@ -208,7 +231,7 @@ class ObjectDetector(Node):
 
 
 
-                                if (cls==5) and (self.stop_sign==0) and (self.stop_buffer==0):
+                                if (cls==5) and (self.stop_sign==0) and (self.stop_buffer==0) :
                                     # x1, y1, x2, y2 = map(int, box.xyxy[0])  # Bounding box coordinates
                                    
                                     
@@ -221,7 +244,7 @@ class ObjectDetector(Node):
                             
 
                 #                 # changing the trafficlight flag
-                                if cls==3 and  180<x1<250:  #red light 
+                                if cls==3 and  190<x1<220 and 45<y2<70 and self.drop_off_f:  #red light 
                                     # self.get_logger().info(f"red light detected width id {h} at {x1 , x2 , y1 , y2}")                                         
                                     
                                     if  h>10:
@@ -250,7 +273,7 @@ class ObjectDetector(Node):
                 
                 
                 # # 4. Optional: Show the frame (disable this on the car to save CPU)
-                cv2.imshow("YOLO Input Stream", cv_image)
+                cv2.imshow("YOLO_Stream", cv_image)
                 cv2.waitKey(1)
                 
             except Exception as e:

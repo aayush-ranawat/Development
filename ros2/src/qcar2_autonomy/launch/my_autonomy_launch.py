@@ -57,12 +57,7 @@ def generate_launch_description():
         name ='path_pub',
         # parameters=[{"use_sim_time":True}]
     )
-    odom_publisher= Node(
-        package ='qcar2_autonomy',
-        executable ='odom_pub',
-        name ='odom_pub',
-        # parameters=[{"use_sim_time":True}]
-    )
+   
 
 
     imu_odom_node=Node(
@@ -121,45 +116,6 @@ def generate_launch_description():
     }]
 )
     
-    # slam_localization_node = Node(
-    #     package='slam_toolbox',
-    #     executable='localization_slam_toolbox_node',
-    #     name='slam_toolbox',
-    #     output='screen',
-    #     parameters=[{
-    #         # --- Mode ---
-    #         'use_sim_time': True,
-    #         'mode': 'localization',
-
-    #         # --- Map ---
-    #         'map_file_name': 'maps/ORIGIN_MAP',
-
-    #         # --- Frames ---
-    #         'map_frame': 'map',
-    #         'odom_frame': 'odom',
-    #         'base_frame': 'base_link',
-    #         'tracking_frame': 'base_scan',
-
-    #         # --- Scan ---
-    #         'scan_topic': 'scan',
-
-    #         # --- TF tuning ---
-    #         'lookup_transform_timeout_sec': 0.5,
-    #         'tf_buffer_duration': 30.0,
-    #         'map_start_pose':[-1.28700493, -0.61549585,-0.7802] ,      #[-1.205, -0.83, -0.7802],  
-
-
-    #         # --- Performance ---
-    #         'throttle_scans': 1,
-    #         'scan_queue_size': 20,
-    #         'max_laser_range': 10.0,
-
-    #         # --- Localization tuning ---
-    #         'minimum_travel_distance': 0.0,
-    #         'minimum_travel_heading': 0.0
-    #     }]
-    # )
-
 
     slam_localization=LaunchDescription([
         launch_ros.actions.Node(
@@ -199,6 +155,23 @@ def generate_launch_description():
                 ('cmd_vel_out', '/cmd_vel_nav')
             ]
         )
+    
+
+    stanley_node=Node(
+        package='qcar2_autonomy',
+        executable='stanley_node',
+        name='stanley_node'
+
+
+    )
+
+    yolo_node=Node(
+        package='qcar2_autonomy',
+        executable='yolo_detector',
+        name='yolo_detector'
+
+
+    )
 
 
 
@@ -221,5 +194,7 @@ def generate_launch_description():
         slam_localization,
         path_pub_node,
         mux_node,
+        stanley_node,
+        yolo_node,
         
     ])

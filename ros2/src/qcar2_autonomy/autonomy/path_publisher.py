@@ -37,7 +37,7 @@ class roadmap_viz(Node):
         # ---- CONFIG ----
         useSmallMap = False
         leftHandTraffic = False
-        nodeSequence = [10, 2, 4, 14 , 20 , 22 , 9 , 13 , 19 , 17 , 20 , 22 , 10 ]
+        nodeSequence = [10, 2, 4, 14, 20, 22, 9, 7, 14, 20, 22, 10]
 
         roadmap = SDCSRoadMap(
             leftHandTraffic=leftHandTraffic,
@@ -45,8 +45,9 @@ class roadmap_viz(Node):
         )
 
         # Path shape: 2 x N  (x, y)
-        self.path_np = roadmap.generate_path(nodeSequence=nodeSequence)[:2, :] * 0.95  #0.975    #scaling the path
-        self.path_np = self.rotate_waypoints(self.path_np,-8)                            # rotate by 9 degree
+        self.path_np = roadmap.generate_path(nodeSequence=nodeSequence)[:2, :] * 0.954  #0.975    #scaling the path
+        self.path_np[0,:] , self.path_np[1,:]=self.path_np[0,:] * 0.954 + 0.035 ,self.path_np[1,:] * 0.957 + 0.06
+        self.path_np = self.rotate_waypoints(self.path_np,-7.5)                            # rotate by 9 degree
 
         self.timer=self.create_timer(1.0,self.publish_path)
         self.get_logger().info("Published XY path to path_viz")
