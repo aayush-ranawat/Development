@@ -10,6 +10,8 @@ Follow the steps below to build and launch the project:
    colcon build --symlink-install
    ros2 launch qcar2_autonomy my_autonomy_launch.py
 
+3.This will Launch the quanser contril nodes with stanley controller.
+
 Additional Dependencies
 
 Make sure the following Python packages are installed:
@@ -21,6 +23,7 @@ cvxpy (required only if using the MPC node)
 You can install them by adding command in dockerfile or using:
    ```bash
 pip install ultralytics cvxpy
+
 
 
 
