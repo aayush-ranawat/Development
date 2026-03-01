@@ -71,5 +71,8 @@ Follow the steps below to build and launch the project:
 ### Python Dependencies
 Ensure the following Python packages are installed:
 - `ultralytics`, `cvxpy`, `scipy`
-*Note: For detailed hardware configuration, refer to the manuals in `python_resources/read before starting.txt`.*
+
+
+See the video demonstration [link_1]()     [link_2](https://youtu.be/qH_KObXcGQ8?si=vGFEC_wz_y0v0Vxl)
+
 
