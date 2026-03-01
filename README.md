@@ -1,8 +1,8 @@
-# QCar 2 Autonomy Stack
+# Quanser ACC 2026 Submission
 
 This repository contains the autonomy stack for the Quanser QCar 2 platform, implemented using ROS 2. It provides a comprehensive suite of tools for state estimation, SLAM, perception, and path following.
 
-## Project Overview
+## Overview
 
 The stack is designed to enable autonomous navigation for the QCar 2. Key components include:
 
@@ -72,3 +72,4 @@ Follow the steps below to build and launch the project:
 Ensure the following Python packages are installed:
 - `ultralytics`, `cvxpy`, `scipy`
 *Note: For detailed hardware configuration, refer to the manuals in `python_resources/read before starting.txt`.*
+
