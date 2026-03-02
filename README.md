@@ -1,4 +1,4 @@
-# Quanser ACC 2026 Submission
+# Team DEFT Quanser ACC 2026 Submission
 
 This repository contains the autonomy stack for the Quanser QCar 2 platform, implemented using ROS 2. It provides a comprehensive suite of tools for state estimation, SLAM, perception, and path following.
 
@@ -73,6 +73,7 @@ Ensure the following Python packages are installed:
 - `ultralytics`, `cvxpy`, `scipy`
 
 
-See the video demonstration [link_1]()     [link_2](https://youtu.be/qH_KObXcGQ8?si=vGFEC_wz_y0v0Vxl)
+See the video demonstration [link_1](https://youtu.be/Qf9uJDl8HPE?si=Sy7LIrqWtqWDTHgp)     [link_2](https://youtu.be/qH_KObXcGQ8?si=vGFEC_wz_y0v0Vxl)
+
 
 
