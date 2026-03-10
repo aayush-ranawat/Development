@@ -77,3 +77,10 @@ See the video demonstration [link_1](https://youtu.be/Qf9uJDl8HPE?si=Sy7LIrqWtqW
 
 
 
+## Note
+
+Many of the control alorithms are borrowed from [Python Robotics](https://github.com/AtsushiSakai/PythonRobotics)
+
+
+
+
